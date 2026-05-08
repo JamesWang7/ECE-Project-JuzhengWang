@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "type": "PI",
+        "fanouts": [
+            10
+        ]
+    },
+    {
+        "id": 2,
+        "type": "PI",
+        "fanouts": [
+            16
+        ]
+    },
+    {
+        "id": 3,
+        "type": "PI",
+        "fanouts": [
+            10,
+            11
+        ]
+    },
+    {
+        "id": 6,
+        "type": "PI",
+        "fanouts": [
+            11
+        ]
+    },
+    {
+        "id": 7,
+        "type": "PI",
+        "fanouts": [
+            19
+        ]
+    },
+    {
+        "id": 10,
+        "type": "NAND",
+        "fanouts": [
+            22
+        ]
+    },
+    {
+        "id": 11,
+        "type": "NAND",
+        "fanouts": [
+            16,
+            19
+        ]
+    },
+    {
+        "id": 16,
+        "type": "NAND",
+        "fanouts": [
+            22,
+            23
+        ]
+    },
+    {
+        "id": 19,
+        "type": "NAND",
+        "fanouts": [
+            23
+        ]
+    },
+    {
+        "id": 22,
+        "type": "NAND",
+        "fanouts": []
+    },
+    {
+        "id": 23,
+        "type": "NAND",
+        "fanouts": []
+    }
+]

@@ -1,0 +1,1507 @@
+[
+    {
+        "id": 1,
+        "type": "PI",
+        "fanouts": [
+            118,
+            242
+        ]
+    },
+    {
+        "id": 4,
+        "type": "PI",
+        "fanouts": [
+            119,
+            154,
+            380
+        ]
+    },
+    {
+        "id": 8,
+        "type": "PI",
+        "fanouts": [
+            157,
+            334
+        ]
+    },
+    {
+        "id": 11,
+        "type": "PI",
+        "fanouts": [
+            122,
+            246
+        ]
+    },
+    {
+        "id": 14,
+        "type": "PI",
+        "fanouts": [
+            158,
+            371
+        ]
+    },
+    {
+        "id": 17,
+        "type": "PI",
+        "fanouts": [
+            123,
+            159,
+            381
+        ]
+    },
+    {
+        "id": 21,
+        "type": "PI",
+        "fanouts": [
+            183,
+            336
+        ]
+    },
+    {
+        "id": 24,
+        "type": "PI",
+        "fanouts": [
+            126,
+            250
+        ]
+    },
+    {
+        "id": 27,
+        "type": "PI",
+        "fanouts": [
+            184,
+            372
+        ]
+    },
+    {
+        "id": 30,
+        "type": "PI",
+        "fanouts": [
+            127,
+            162,
+            386
+        ]
+    },
+    {
+        "id": 34,
+        "type": "PI",
+        "fanouts": [
+            185,
+            338
+        ]
+    },
+    {
+        "id": 37,
+        "type": "PI",
+        "fanouts": [
+            130,
+            254
+        ]
+    },
+    {
+        "id": 40,
+        "type": "PI",
+        "fanouts": [
+            186,
+            373
+        ]
+    },
+    {
+        "id": 43,
+        "type": "PI",
+        "fanouts": [
+            131,
+            165,
+            393
+        ]
+    },
+    {
+        "id": 47,
+        "type": "PI",
+        "fanouts": [
+            187,
+            340
+        ]
+    },
+    {
+        "id": 50,
+        "type": "PI",
+        "fanouts": [
+            134,
+            255
+        ]
+    },
+    {
+        "id": 53,
+        "type": "PI",
+        "fanouts": [
+            188,
+            374
+        ]
+    },
+    {
+        "id": 56,
+        "type": "PI",
+        "fanouts": [
+            135,
+            168,
+            399
+        ]
+    },
+    {
+        "id": 60,
+        "type": "PI",
+        "fanouts": [
+            189,
+            342
+        ]
+    },
+    {
+        "id": 63,
+        "type": "PI",
+        "fanouts": [
+            138,
+            256
+        ]
+    },
+    {
+        "id": 66,
+        "type": "PI",
+        "fanouts": [
+            190,
+            375
+        ]
+    },
+    {
+        "id": 69,
+        "type": "PI",
+        "fanouts": [
+            139,
+            171,
+            404
+        ]
+    },
+    {
+        "id": 73,
+        "type": "PI",
+        "fanouts": [
+            191,
+            344
+        ]
+    },
+    {
+        "id": 76,
+        "type": "PI",
+        "fanouts": [
+            142,
+            257
+        ]
+    },
+    {
+        "id": 79,
+        "type": "PI",
+        "fanouts": [
+            192,
+            376
+        ]
+    },
+    {
+        "id": 82,
+        "type": "PI",
+        "fanouts": [
+            143,
+            174,
+            407
+        ]
+    },
+    {
+        "id": 86,
+        "type": "PI",
+        "fanouts": [
+            193,
+            345
+        ]
+    },
+    {
+        "id": 89,
+        "type": "PI",
+        "fanouts": [
+            146,
+            258
+        ]
+    },
+    {
+        "id": 92,
+        "type": "PI",
+        "fanouts": [
+            194,
+            377
+        ]
+    },
+    {
+        "id": 95,
+        "type": "PI",
+        "fanouts": [
+            147,
+            177,
+            411
+        ]
+    },
+    {
+        "id": 99,
+        "type": "PI",
+        "fanouts": [
+            195,
+            346
+        ]
+    },
+    {
+        "id": 102,
+        "type": "PI",
+        "fanouts": [
+            150,
+            259
+        ]
+    },
+    {
+        "id": 105,
+        "type": "PI",
+        "fanouts": [
+            196,
+            378
+        ]
+    },
+    {
+        "id": 108,
+        "type": "PI",
+        "fanouts": [
+            151,
+            180,
+            414
+        ]
+    },
+    {
+        "id": 112,
+        "type": "PI",
+        "fanouts": [
+            197,
+            347
+        ]
+    },
+    {
+        "id": 115,
+        "type": "PI",
+        "fanouts": [
+            198,
+            379
+        ]
+    },
+    {
+        "id": 118,
+        "type": "NOT",
+        "fanouts": [
+            154
+        ]
+    },
+    {
+        "id": 119,
+        "type": "NOT",
+        "fanouts": [
+            157,
+            158
+        ]
+    },
+    {
+        "id": 122,
+        "type": "NOT",
+        "fanouts": [
+            159
+        ]
+    },
+    {
+        "id": 123,
+        "type": "NOT",
+        "fanouts": [
+            183,
+            184
+        ]
+    },
+    {
+        "id": 126,
+        "type": "NOT",
+        "fanouts": [
+            162
+        ]
+    },
+    {
+        "id": 127,
+        "type": "NOT",
+        "fanouts": [
+            185,
+            186
+        ]
+    },
+    {
+        "id": 130,
+        "type": "NOT",
+        "fanouts": [
+            165
+        ]
+    },
+    {
+        "id": 131,
+        "type": "NOT",
+        "fanouts": [
+            187,
+            188
+        ]
+    },
+    {
+        "id": 134,
+        "type": "NOT",
+        "fanouts": [
+            168
+        ]
+    },
+    {
+        "id": 135,
+        "type": "NOT",
+        "fanouts": [
+            189,
+            190
+        ]
+    },
+    {
+        "id": 138,
+        "type": "NOT",
+        "fanouts": [
+            171
+        ]
+    },
+    {
+        "id": 139,
+        "type": "NOT",
+        "fanouts": [
+            191,
+            192
+        ]
+    },
+    {
+        "id": 142,
+        "type": "NOT",
+        "fanouts": [
+            174
+        ]
+    },
+    {
+        "id": 143,
+        "type": "NOT",
+        "fanouts": [
+            193,
+            194
+        ]
+    },
+    {
+        "id": 146,
+        "type": "NOT",
+        "fanouts": [
+            177
+        ]
+    },
+    {
+        "id": 147,
+        "type": "NOT",
+        "fanouts": [
+            195,
+            196
+        ]
+    },
+    {
+        "id": 150,
+        "type": "NOT",
+        "fanouts": [
+            180
+        ]
+    },
+    {
+        "id": 151,
+        "type": "NOT",
+        "fanouts": [
+            197,
+            198
+        ]
+    },
+    {
+        "id": 154,
+        "type": "NAND",
+        "fanouts": [
+            199,
+            224
+        ]
+    },
+    {
+        "id": 157,
+        "type": "NOR",
+        "fanouts": [
+            260
+        ]
+    },
+    {
+        "id": 158,
+        "type": "NOR",
+        "fanouts": [
+            263
+        ]
+    },
+    {
+        "id": 159,
+        "type": "NAND",
+        "fanouts": [
+            199,
+            227
+        ]
+    },
+    {
+        "id": 162,
+        "type": "NAND",
+        "fanouts": [
+            199,
+            230
+        ]
+    },
+    {
+        "id": 165,
+        "type": "NAND",
+        "fanouts": [
+            199,
+            233
+        ]
+    },
+    {
+        "id": 168,
+        "type": "NAND",
+        "fanouts": [
+            199,
+            236
+        ]
+    },
+    {
+        "id": 171,
+        "type": "NAND",
+        "fanouts": [
+            199,
+            239
+        ]
+    },
+    {
+        "id": 174,
+        "type": "NAND",
+        "fanouts": [
+            199,
+            243
+        ]
+    },
+    {
+        "id": 177,
+        "type": "NAND",
+        "fanouts": [
+            199,
+            247
+        ]
+    },
+    {
+        "id": 180,
+        "type": "NAND",
+        "fanouts": [
+            199,
+            251
+        ]
+    },
+    {
+        "id": 183,
+        "type": "NOR",
+        "fanouts": [
+            264
+        ]
+    },
+    {
+        "id": 184,
+        "type": "NOR",
+        "fanouts": [
+            288
+        ]
+    },
+    {
+        "id": 185,
+        "type": "NOR",
+        "fanouts": [
+            267
+        ]
+    },
+    {
+        "id": 186,
+        "type": "NOR",
+        "fanouts": [
+            289
+        ]
+    },
+    {
+        "id": 187,
+        "type": "NOR",
+        "fanouts": [
+            270
+        ]
+    },
+    {
+        "id": 188,
+        "type": "NOR",
+        "fanouts": [
+            290
+        ]
+    },
+    {
+        "id": 189,
+        "type": "NOR",
+        "fanouts": [
+            273
+        ]
+    },
+    {
+        "id": 190,
+        "type": "NOR",
+        "fanouts": [
+            291
+        ]
+    },
+    {
+        "id": 191,
+        "type": "NOR",
+        "fanouts": [
+            276
+        ]
+    },
+    {
+        "id": 192,
+        "type": "NOR",
+        "fanouts": [
+            292
+        ]
+    },
+    {
+        "id": 193,
+        "type": "NOR",
+        "fanouts": [
+            279
+        ]
+    },
+    {
+        "id": 194,
+        "type": "NOR",
+        "fanouts": [
+            293
+        ]
+    },
+    {
+        "id": 195,
+        "type": "NOR",
+        "fanouts": [
+            282
+        ]
+    },
+    {
+        "id": 196,
+        "type": "NOR",
+        "fanouts": [
+            294
+        ]
+    },
+    {
+        "id": 197,
+        "type": "NOR",
+        "fanouts": [
+            285
+        ]
+    },
+    {
+        "id": 198,
+        "type": "NOR",
+        "fanouts": [
+            295
+        ]
+    },
+    {
+        "id": 199,
+        "type": "AND",
+        "fanouts": [
+            203,
+            213,
+            223
+        ]
+    },
+    {
+        "id": 203,
+        "type": "NOT",
+        "fanouts": [
+            224,
+            227,
+            230,
+            233,
+            236,
+            239,
+            243,
+            247,
+            251
+        ]
+    },
+    {
+        "id": 213,
+        "type": "NOT",
+        "fanouts": [
+            242,
+            246,
+            250,
+            254,
+            255,
+            256,
+            257,
+            258,
+            259
+        ]
+    },
+    {
+        "id": 223,
+        "type": "NOT",
+        "fanouts": []
+    },
+    {
+        "id": 224,
+        "type": "XOR",
+        "fanouts": [
+            260,
+            263
+        ]
+    },
+    {
+        "id": 227,
+        "type": "XOR",
+        "fanouts": [
+            264,
+            288
+        ]
+    },
+    {
+        "id": 230,
+        "type": "XOR",
+        "fanouts": [
+            267,
+            289
+        ]
+    },
+    {
+        "id": 233,
+        "type": "XOR",
+        "fanouts": [
+            270,
+            290
+        ]
+    },
+    {
+        "id": 236,
+        "type": "XOR",
+        "fanouts": [
+            273,
+            291
+        ]
+    },
+    {
+        "id": 239,
+        "type": "XOR",
+        "fanouts": [
+            276,
+            292
+        ]
+    },
+    {
+        "id": 242,
+        "type": "NAND",
+        "fanouts": [
+            380
+        ]
+    },
+    {
+        "id": 243,
+        "type": "XOR",
+        "fanouts": [
+            279,
+            293
+        ]
+    },
+    {
+        "id": 246,
+        "type": "NAND",
+        "fanouts": [
+            381
+        ]
+    },
+    {
+        "id": 247,
+        "type": "XOR",
+        "fanouts": [
+            282,
+            294
+        ]
+    },
+    {
+        "id": 250,
+        "type": "NAND",
+        "fanouts": [
+            386
+        ]
+    },
+    {
+        "id": 251,
+        "type": "XOR",
+        "fanouts": [
+            285,
+            295
+        ]
+    },
+    {
+        "id": 254,
+        "type": "NAND",
+        "fanouts": [
+            393
+        ]
+    },
+    {
+        "id": 255,
+        "type": "NAND",
+        "fanouts": [
+            399
+        ]
+    },
+    {
+        "id": 256,
+        "type": "NAND",
+        "fanouts": [
+            404
+        ]
+    },
+    {
+        "id": 257,
+        "type": "NAND",
+        "fanouts": [
+            407
+        ]
+    },
+    {
+        "id": 258,
+        "type": "NAND",
+        "fanouts": [
+            411
+        ]
+    },
+    {
+        "id": 259,
+        "type": "NAND",
+        "fanouts": [
+            414
+        ]
+    },
+    {
+        "id": 260,
+        "type": "NAND",
+        "fanouts": [
+            296,
+            330
+        ]
+    },
+    {
+        "id": 263,
+        "type": "NAND",
+        "fanouts": [
+            300
+        ]
+    },
+    {
+        "id": 264,
+        "type": "NAND",
+        "fanouts": [
+            296,
+            331
+        ]
+    },
+    {
+        "id": 267,
+        "type": "NAND",
+        "fanouts": [
+            296,
+            332
+        ]
+    },
+    {
+        "id": 270,
+        "type": "NAND",
+        "fanouts": [
+            296,
+            333
+        ]
+    },
+    {
+        "id": 273,
+        "type": "NAND",
+        "fanouts": [
+            296,
+            335
+        ]
+    },
+    {
+        "id": 276,
+        "type": "NAND",
+        "fanouts": [
+            296,
+            337
+        ]
+    },
+    {
+        "id": 279,
+        "type": "NAND",
+        "fanouts": [
+            296,
+            339
+        ]
+    },
+    {
+        "id": 282,
+        "type": "NAND",
+        "fanouts": [
+            296,
+            341
+        ]
+    },
+    {
+        "id": 285,
+        "type": "NAND",
+        "fanouts": [
+            296,
+            343
+        ]
+    },
+    {
+        "id": 288,
+        "type": "NAND",
+        "fanouts": [
+            301
+        ]
+    },
+    {
+        "id": 289,
+        "type": "NAND",
+        "fanouts": [
+            302
+        ]
+    },
+    {
+        "id": 290,
+        "type": "NAND",
+        "fanouts": [
+            303
+        ]
+    },
+    {
+        "id": 291,
+        "type": "NAND",
+        "fanouts": [
+            304
+        ]
+    },
+    {
+        "id": 292,
+        "type": "NAND",
+        "fanouts": [
+            305
+        ]
+    },
+    {
+        "id": 293,
+        "type": "NAND",
+        "fanouts": [
+            306
+        ]
+    },
+    {
+        "id": 294,
+        "type": "NAND",
+        "fanouts": [
+            307
+        ]
+    },
+    {
+        "id": 295,
+        "type": "NAND",
+        "fanouts": [
+            308
+        ]
+    },
+    {
+        "id": 296,
+        "type": "AND",
+        "fanouts": [
+            309,
+            319,
+            329
+        ]
+    },
+    {
+        "id": 300,
+        "type": "NOT",
+        "fanouts": [
+            348
+        ]
+    },
+    {
+        "id": 301,
+        "type": "NOT",
+        "fanouts": [
+            349
+        ]
+    },
+    {
+        "id": 302,
+        "type": "NOT",
+        "fanouts": [
+            350
+        ]
+    },
+    {
+        "id": 303,
+        "type": "NOT",
+        "fanouts": [
+            351
+        ]
+    },
+    {
+        "id": 304,
+        "type": "NOT",
+        "fanouts": [
+            352
+        ]
+    },
+    {
+        "id": 305,
+        "type": "NOT",
+        "fanouts": [
+            353
+        ]
+    },
+    {
+        "id": 306,
+        "type": "NOT",
+        "fanouts": [
+            354
+        ]
+    },
+    {
+        "id": 307,
+        "type": "NOT",
+        "fanouts": [
+            355
+        ]
+    },
+    {
+        "id": 308,
+        "type": "NOT",
+        "fanouts": [
+            356
+        ]
+    },
+    {
+        "id": 309,
+        "type": "NOT",
+        "fanouts": [
+            330,
+            331,
+            332,
+            333,
+            335,
+            337,
+            339,
+            341,
+            343
+        ]
+    },
+    {
+        "id": 319,
+        "type": "NOT",
+        "fanouts": [
+            334,
+            336,
+            338,
+            340,
+            342,
+            344,
+            345,
+            346,
+            347
+        ]
+    },
+    {
+        "id": 329,
+        "type": "NOT",
+        "fanouts": []
+    },
+    {
+        "id": 330,
+        "type": "XOR",
+        "fanouts": [
+            348
+        ]
+    },
+    {
+        "id": 331,
+        "type": "XOR",
+        "fanouts": [
+            349
+        ]
+    },
+    {
+        "id": 332,
+        "type": "XOR",
+        "fanouts": [
+            350
+        ]
+    },
+    {
+        "id": 333,
+        "type": "XOR",
+        "fanouts": [
+            351
+        ]
+    },
+    {
+        "id": 334,
+        "type": "NAND",
+        "fanouts": [
+            380
+        ]
+    },
+    {
+        "id": 335,
+        "type": "XOR",
+        "fanouts": [
+            352
+        ]
+    },
+    {
+        "id": 336,
+        "type": "NAND",
+        "fanouts": [
+            381
+        ]
+    },
+    {
+        "id": 337,
+        "type": "XOR",
+        "fanouts": [
+            353
+        ]
+    },
+    {
+        "id": 338,
+        "type": "NAND",
+        "fanouts": [
+            386
+        ]
+    },
+    {
+        "id": 339,
+        "type": "XOR",
+        "fanouts": [
+            354
+        ]
+    },
+    {
+        "id": 340,
+        "type": "NAND",
+        "fanouts": [
+            393
+        ]
+    },
+    {
+        "id": 341,
+        "type": "XOR",
+        "fanouts": [
+            355
+        ]
+    },
+    {
+        "id": 342,
+        "type": "NAND",
+        "fanouts": [
+            399
+        ]
+    },
+    {
+        "id": 343,
+        "type": "XOR",
+        "fanouts": [
+            356
+        ]
+    },
+    {
+        "id": 344,
+        "type": "NAND",
+        "fanouts": [
+            404
+        ]
+    },
+    {
+        "id": 345,
+        "type": "NAND",
+        "fanouts": [
+            407
+        ]
+    },
+    {
+        "id": 346,
+        "type": "NAND",
+        "fanouts": [
+            411
+        ]
+    },
+    {
+        "id": 347,
+        "type": "NAND",
+        "fanouts": [
+            414
+        ]
+    },
+    {
+        "id": 348,
+        "type": "NAND",
+        "fanouts": [
+            357
+        ]
+    },
+    {
+        "id": 349,
+        "type": "NAND",
+        "fanouts": [
+            357
+        ]
+    },
+    {
+        "id": 350,
+        "type": "NAND",
+        "fanouts": [
+            357
+        ]
+    },
+    {
+        "id": 351,
+        "type": "NAND",
+        "fanouts": [
+            357
+        ]
+    },
+    {
+        "id": 352,
+        "type": "NAND",
+        "fanouts": [
+            357
+        ]
+    },
+    {
+        "id": 353,
+        "type": "NAND",
+        "fanouts": [
+            357
+        ]
+    },
+    {
+        "id": 354,
+        "type": "NAND",
+        "fanouts": [
+            357
+        ]
+    },
+    {
+        "id": 355,
+        "type": "NAND",
+        "fanouts": [
+            357
+        ]
+    },
+    {
+        "id": 356,
+        "type": "NAND",
+        "fanouts": [
+            357
+        ]
+    },
+    {
+        "id": 357,
+        "type": "AND",
+        "fanouts": [
+            360,
+            370
+        ]
+    },
+    {
+        "id": 360,
+        "type": "NOT",
+        "fanouts": [
+            371,
+            372,
+            373,
+            374,
+            375,
+            376,
+            377,
+            378,
+            379
+        ]
+    },
+    {
+        "id": 370,
+        "type": "NOT",
+        "fanouts": []
+    },
+    {
+        "id": 371,
+        "type": "NAND",
+        "fanouts": [
+            380
+        ]
+    },
+    {
+        "id": 372,
+        "type": "NAND",
+        "fanouts": [
+            381
+        ]
+    },
+    {
+        "id": 373,
+        "type": "NAND",
+        "fanouts": [
+            386
+        ]
+    },
+    {
+        "id": 374,
+        "type": "NAND",
+        "fanouts": [
+            393
+        ]
+    },
+    {
+        "id": 375,
+        "type": "NAND",
+        "fanouts": [
+            399
+        ]
+    },
+    {
+        "id": 376,
+        "type": "NAND",
+        "fanouts": [
+            404
+        ]
+    },
+    {
+        "id": 377,
+        "type": "NAND",
+        "fanouts": [
+            407
+        ]
+    },
+    {
+        "id": 378,
+        "type": "NAND",
+        "fanouts": [
+            411
+        ]
+    },
+    {
+        "id": 379,
+        "type": "NAND",
+        "fanouts": [
+            414
+        ]
+    },
+    {
+        "id": 380,
+        "type": "NAND",
+        "fanouts": [
+            415
+        ]
+    },
+    {
+        "id": 381,
+        "type": "NAND",
+        "fanouts": [
+            416,
+            430,
+            431,
+            432
+        ]
+    },
+    {
+        "id": 386,
+        "type": "NAND",
+        "fanouts": [
+            416,
+            422,
+            425,
+            429,
+            430,
+            431
+        ]
+    },
+    {
+        "id": 393,
+        "type": "NAND",
+        "fanouts": [
+            416,
+            417,
+            425,
+            428,
+            429
+        ]
+    },
+    {
+        "id": 399,
+        "type": "NAND",
+        "fanouts": [
+            416,
+            425,
+            428,
+            430
+        ]
+    },
+    {
+        "id": 404,
+        "type": "NAND",
+        "fanouts": [
+            416,
+            418
+        ]
+    },
+    {
+        "id": 407,
+        "type": "NAND",
+        "fanouts": [
+            416,
+            419,
+            429
+        ]
+    },
+    {
+        "id": 411,
+        "type": "NAND",
+        "fanouts": [
+            416,
+            420
+        ]
+    },
+    {
+        "id": 414,
+        "type": "NAND",
+        "fanouts": [
+            416
+        ]
+    },
+    {
+        "id": 415,
+        "type": "NOT",
+        "fanouts": [
+            421
+        ]
+    },
+    {
+        "id": 416,
+        "type": "AND",
+        "fanouts": [
+            421
+        ]
+    },
+    {
+        "id": 417,
+        "type": "NOT",
+        "fanouts": [
+            422
+        ]
+    },
+    {
+        "id": 418,
+        "type": "NOT",
+        "fanouts": [
+            425
+        ]
+    },
+    {
+        "id": 419,
+        "type": "NOT",
+        "fanouts": [
+            428
+        ]
+    },
+    {
+        "id": 420,
+        "type": "NOT",
+        "fanouts": [
+            429
+        ]
+    },
+    {
+        "id": 421,
+        "type": "NOR",
+        "fanouts": []
+    },
+    {
+        "id": 422,
+        "type": "NAND",
+        "fanouts": [
+            430,
+            432
+        ]
+    },
+    {
+        "id": 425,
+        "type": "NAND",
+        "fanouts": [
+            431,
+            432
+        ]
+    },
+    {
+        "id": 428,
+        "type": "NAND",
+        "fanouts": [
+            431
+        ]
+    },
+    {
+        "id": 429,
+        "type": "NAND",
+        "fanouts": [
+            432
+        ]
+    },
+    {
+        "id": 430,
+        "type": "NAND",
+        "fanouts": []
+    },
+    {
+        "id": 431,
+        "type": "NAND",
+        "fanouts": []
+    },
+    {
+        "id": 432,
+        "type": "NAND",
+        "fanouts": []
+    }
+]

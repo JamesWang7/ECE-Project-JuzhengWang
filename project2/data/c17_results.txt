@@ -1,0 +1,50 @@
+Pattern 1: D7092618BFFB96A 9668816217D0E815 57A36AE61FD102FB CF0F18349905A1A3 989725512291952 
+Output 24: Faults detected: 1_0_SA1, 2_0_SA1, 3_0_SA0, 3_0_SA1, 10_3_SA1, 11_3_SA1, 6_0_SA1, 7_0_SA1, 10_0_SA1, 11_0_SA0, 11_0_SA1, 16_11_SA1, 16_0_SA0, 16_0_SA1, 22_16_SA1, 22_0_SA0, 22_0_SA1
+Output 25: Faults detected: 1_0_SA1, 2_0_SA1, 3_0_SA0, 3_0_SA1, 11_3_SA1, 6_0_SA1, 7_0_SA1, 11_0_SA0, 11_0_SA1, 16_11_SA1, 19_11_SA1, 16_0_SA0, 16_0_SA1, 23_16_SA1, 19_0_SA1, 23_0_SA0, 23_0_SA1
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+
+Pattern 2: C38BB45902384809 255449094D04B534 4584D222C5DE99E6 A640592AD6CF14F1 81C8745A7BDE365D 
+Output 24: Faults detected: None
+Output 25: Faults detected: None
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+
+Pattern 3: 8A69E86160E29E63 64883F74AE673745 279F8157FB67E693 A63765E66203AEDA 8F0ABFEDA021A44A 
+Output 24: Faults detected: None
+Output 25: Faults detected: None
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+
+Pattern 4: 1B43AD38AF4F8C0D 8148A9C144B24C0B 903362651299E793 2EE1F7F2AFD115F3 33FD9C43142D4370 
+Output 24: Faults detected: None
+Output 25: Faults detected: None
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+
+Pattern 5: 946936371F585B15 6DE58E5EE9697AC0 7C28811983CAD30F C7C75808F6EC4CFF C899F7E65D5A38A2 
+Output 24: Faults detected: None
+Output 25: Faults detected: None
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+
+Pattern 6: 931D919DD90F3DF8 DB917157D1E218F3 1A9F4164E5E34946 C058A816A6AA6F3D 2A782C550D76C83A 
+Output 24: Faults detected: None
+Output 25: Faults detected: None
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+
+Pattern 7: 6C263B297D45B389 95ED63E589F1BF6F 22B42C4514ECCD0C 24919DAD7617E5B1 4C2F76B162A3AB59 
+Output 24: Faults detected: None
+Output 25: Faults detected: None
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+
+Pattern 8: 56E4A547516A720 141920D6D05D7932 1B0E6272DD7A0191 9984A19AA22D369 66093805ED25E33E 
+Output 24: Faults detected: None
+Output 25: Faults detected: None
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+
+Pattern 9: E2686820C312DA37 376FB00002A57083 DB5FC61A14D654A0 5E43A2F25AA4D7ED 9B793C45DAD79905 
+Output 24: Faults detected: None
+Output 25: Faults detected: None
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+
+Pattern 10: 1F7387713461EFF0 9504C6FFB79C1DBB 3527202FDBEA8404 200A01948A30F3FF 6BD68E14D2BF07A 
+Output 24: Faults detected: None
+Output 25: Faults detected: None
+Cumulative Fault Coverage: 22 / 22 (100.00%)
+

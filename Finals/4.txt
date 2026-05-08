@@ -1,0 +1,272 @@
+So, with that, we covered, Um, Basics of this thing.
+所以，我们就讲了，嗯，这个东西的基础知识。
+
+
+Now, let's talk about Of atpg, so atpg process itself.
+现在，我们来说说 ATPG 本身，也就是 atpg 过程本身。
+
+
+We have simulation based attpg Very randomly generate patterns, and then we try to see if it is a detector or not, and if it is detected, we found it as parallel.
+我们有基于仿真的attpg，非常随机地生成图案，然后尝试判断它是否是探测器，如果检测到，我们发现它是并行的。
+
+
+It's randomly generated, And if you did not find it, then we will have to trigger one of those algorithms, such as EDD or Podium or fan, or D algorithm, etc, etc.
+这个结果是通过随机算法生成的；如果你没有找到它，那幺我们就需要使用某些特定的算法来帮助你找到它，比如 EDD、Podium、Fan 或 D 等算法。
+
+
+Why do you use simulation based PPG first? Yeah, it's fast. It's fast. We can run fault simulation fast.
+你为什幺先用基于模拟的PPG？是的，速度很快。它很快。我们可以快速运行故障模拟。
+
+
+And, and therefore, we can very quickly find patterns that can already give me coverage as high as 85, 95, and then I can further shrink the number of such patterns by running reverse order full simulation So I can come down to a limited number of patterns, but the remaining ones I'm going to be targeting with atpg
+因此，我们可以很快找到已经能覆盖高达85、95的模式，然后我还可以通过运行反序全串行模拟进一步缩减这些模式的数量。这样我就能减少到有限数量的模式，但剩下的模式我会用atpg来针对
+
+
+An atpg is slow, and so there.
+ATPG速度慢，就是这样。
+
+
+We, Uh, the first thing that you looked at is the algebra.
+我们，呃，你首先看的是代数。
+
+
+The algebra basically had, Yeah, introduce a symbol 0, 1 x d d bar.
+代数基本上引入了一个符号0,1 x d bar
+
+
+If you look in the composite form, you know, this is good value. Zero faulty value A good value.
+如果你看复合形式，你会发现这是个不错的价值。零故障值，价值不错。
+
+
+One 40 value is zero, etc, etc, So we also discussed that when you do atpg in the re-algorithm, it was done for purely combinational logic circuit. If you do sequential hdpg, I briefly mentioned that the algebra is not accurate, and you need a line valued logic, and so the main value of logic here.
+一个40值是零，等等。我们也讨论过，当你在重新算法中做atpg时，是针对纯组合逻辑电路的。如果你做顺序HDPG，我简要提到的是代数不准确，你需要线值逻辑，这也是逻辑的主要价值。
+
+
+We do not have the values corresponding to X Plus 1 Or X Plus 0. You see that and all of those values will be needed as a.
+我们没有对应于 X 加 1 或 X 加 0 的值。你看到了这些，所有这些价值观都将被需要。
+
+
+The good value is 0, 1, or X, and the faulty value is zero on our
+良好值为0、1或X，故障值为0，且在我们的值上为零。
+
+
+It's at T times T9 the combinations and we need nine valued algebra for signature.
+它是T乘以T9的组合，我们需要九值代数来签名。
+
+
+We set sequential logic is Hpc is very expensive, But in the class, we also introduce the concept of eye attractive logic array
+我们设置串行逻辑，Hpc非常昂贵，但在该类中，我们还引入了眼吸引逻辑数组的概念
+
+
+So, in a mini machine, we have a combinational logic, Okay, and in the combinational logic.
+在一台迷你机器中，我们有一个组合逻辑，好的，在组合逻辑中。
+
+
+We have primary input, primary output, and then the next step function, which becomes, Uh, the president said in the next clock cycle.
+我们有主要输入、主要输出，然后是下一步函数，总统说，在下一个时钟周期中，下一步函数。
+
+
+And so, one we call PPI and the other one we call PPO, pseudo primary input, and zero primary
+所以，一个我们称之为PPI，另一个称为PPO，伪初级输入，零初级输入
+
+
+So, if you draw it this way, so suppose my primary inputs are here
+所以，如果你这样画，假设我的主要输入在这里
+
+
+So, and the primary outputs are there
+所以，主要输出都在那里
+
+
+Okay, And This is My current state or state, and this is my next state.
+好的，这是我目前的状态，这是我下一个状态。
+
+
+Machine. What does it look like
+机器。它看起来是什幺样子
+
+
+A Milli machine.
+一台Milli机器。
+
+
+What does it look like?
+它长什幺样？
+
+
+This is my input, And this is my state input, and the state input is coming from a dim flip flop, And This is the next state.
+这是我的输入，这是我的状态输入，状态输入来自一个暗的触发器，这是下一个状态。
+
+
+So when you apply the next step, it will advance and be no State his primary output, right
+所以当你应用下一步时，它会推进，并且没有状态成为他的主要输出，对吧
+
+
+So, I just Do it in a slightly different way. So, this is my primary input. This is my primary output. This is my state.
+所以，我只是用稍微不同的方式来做。所以，这就是我的主要建议。这是我的主要输出。这是我的州。
+
+
+This is my next state.
+这是我下一个州。
+
+
+Now, what I can do is I can create another copy of the same circuit, And so this is cycle number one primary input cycle number one primary output.
+现在，我可以创建同一个电路的另一个副本，这就是第一主输入周期第一主输出。
+
+
+And if I do another copy Here also has a pi And also po, But this is for the cycle number two, And this is.
+如果我再复制一次，这里也有π和po，但这是第二个周期的，这个是。
+
+
+Another copy Cycle number three.
+又一份副本，第三周期。
+
+
+So, if I keep doing this expansion, And then I basically unrolled my sequential circuit in time, And I created a combinational logic circuit With a limited time window
+所以，如果我继续做这个扩展，然后我基本上在时间内展开了我的顺序电路，并创造了一个有限时间窗口的组合逻辑电路
+
+
+And let's say that time window that I limited is a 10 block Cycles.
+假设我限制的时间窗口是10个格周期。
+
+
+Now, If I want to do sequential hpg, If I put a stuck at zero fault here, I also have to put the same stack at zero fault.
+现在，如果我想做顺序 hpg，如果我在这里设置了“卡在零故障”，我也得把同样的栈放在零故障。
+
+
+Here.
+就在这里。
+
+
+I also took the same stuck, So the whole thing is a combinational logic circuit, But my original sequential circuit if it had 10 pis.
+我也用了同样的卡住，所以整个过程是一个组合逻辑电路，但我原本的串行电路如果有10个πs。
+
+
+How many pis will I have here In the sequential circuit?
+我这里的串行电路里会有多少个PI？
+
+
+Root 10 time frames 100.
+根10时间框架100。
+
+
+Okay.
+好的。
+
+
+So now, Uh, this is all Because initially, I'm starting with all access.
+所以现在，呃，这些都是因为一开始我是从所有访问权限开始的。
+
+
+So I, if I control this Pi, maybe I could not detect this fault, But the fault effect propagated here. And now, I'm doing this Pi, and maybe I'll detect it here, but maybe not. Maybe the fault effect propagated there, and eventually I might be able to catch it, right? Yeah, so much.
+所以我，如果我控制这个π，也许我检测不到这个故障，但故障效应在这里传播了。现在，我正在做这个圆周率，也许我能在这里检测到它，但也可能不会。也许故障效应传播到了那里，最终我或许能捕捉到它，对吧？是的，非常喜欢。
+
+
+Evaluating a single soccer ball, still evaluating single stack at fault
+评估单个足球，仍然评估单个叠放的故障
+
+
+So, this relates to the concept of Performing sequence and all that.
+这与“执行串行”（Performing Sequence）等相关概念有关。
+
+
+So, remember that we Define that.
+记住，我们确实对相关概念进行了定义。
+
+
+If you have a sequential circuit, and if you apply a sequence of inputs, Then eventually, Uh, you'll know what state it is it is in.
+如果你有一个顺序电路，并且应用一系列输入，那幺最终，呃，你会知道它处于什幺状态。
+
+
+Even if you started with all access, remember that. And so that's exactly what is happening. Is that as you apply primary inputs, the internal states are getting clarified, so instead of getting excess which you started with here, there are fewer X's.
+即使你一开始就有全访问权限，也要记住这一点。这正是正在发生的事情。是不是因为你应用主要输入时，内部状态会被澄清，所以不再像你一开始那样得到多余的，而是X的数量减少了。
+
+
+Here.
+就在这里。
+
+
+There are fewer X's here and eventually the excess go away, Right? So eventually, when I do a synchronizing sequence or homing sequence that we discussed. Eventually, those X's go away.
+这里的X少了，最终多余的都会消失，对吧？所以最终，当我做我们讨论过的同步串行或归航串行时，最终，那些X会消失。
+
+
+So, how many times do I need to unroll this A sequential logic?
+那幺，我需要展开多少次这个A串行逻辑？
+
+
+Introduce three sequences distinguishing sequence, synchronizing sequence allowance sequence, and
+引入三个串行：区分串行、同步串行允许串行，
+
+
+Introduce three sequences distinguishing sequence, synchronizing sequence, long sequence and Thing in the module description. So, how many time frames should I unroll?
+在模块描述中引入三个串行：区分串行、同步串行、长串行和事物。那幺，我应该展开多少个时间框架？
+
+
+What relation is there between As sequence lens, So the forming sequence length is 500?
+As 串行透镜之间有什幺关系？形成串行长度是500？
+
+
+I'll have to unroll 500 times, But only then the access will get fully clarified. Is that here?
+我得展开500次，但只有这样访问才能完全澄清。是这里吗？
+
+
+I'm starting with all access Only. With time, it will get life at. So, what happens if I have 10 inputs and annually type 500 times?
+我打算从全权限开始。随着时间推移，它会变得更重要。那幺，如果我有10个输入，每年打500次，会发生什幺？
+
+
+Now, I have 50 000 inputs in the combination of large percent.
+现在，我有5万个输入，都是大百分比的组合。
+
+
+Yeah, And since you're unrolling it sequentially, the pis, you're the number of bits you have to send.
+是的，既然你是按顺序展开，pis，你就是你需要发送的位数。
+
+
+My pis has to be The 500 times the number of bits exactly because this is what happens in cycle zero. This is what happens in cycle one?
+我的PI必须是位数的500倍，因为这正是零周期中发生的情况。这就是第一周期发生的事？
+
+
+This is what happens in cycle two and so on When when you are applying in a sequential mode. So this is where the state blow up happens if I have any inputs. I have 2 to the power n possible combinations that I can apply for the primary inputs.
+这就是第二个循环中发生的情况，依此类推，当你以顺序模式应用时也是如此。这就是如果我有任何输入时，状态爆破就会发生。我有2的n次方可能组合可以应用给主输入。
+
+
+So, if this had 10 primary inputs, I could do 2 to the power 10, but when I unroll 500 times, I have to to the power 5000, And that complexity is just Enormous.
+所以，如果这里有10个主输入，我可以做2次方的10次方，但当我展开500次时，我必须展开到5000次方，这种复杂度极其巨大。
+
+
+Which is why the atpg is just going to be backtracking all the time, Uh, trying to find tests and taking forever to find a test.
+这就是为什幺ATPG会一直来回找测试，找测试结果却花很久。
+
+
+Which is why we don't do sequential energy, Right?
+这就是为什幺我们不做顺序能量，对吧？
+
+
+So, it's the same algorithm as combinational igpg, Except we unroll it in time, and you unroll it in time, such that these access will get fully clarified at the end And the excess fully get clarified at the end.
+所以，它和组合 igpg 的算法是一样的，只不过我们按时间展开，你也按时间展开，这样这些访问最终会被完全澄清，多余的部分也会在最后完全澄清。
+
+
+When the length of the sequence is like the distinguishing sequence of the homing sequence of that order, And for a large circuit if that order is ten thousand, you have to unroll it 10 000 times and which makes that problem is unsolved. Okay, which is why we don't do sequential TPG.
+当串行的长度类似于该阶归母串行的区分串行时，对于一个大电路，如果该串行是万，你必须展开它1万次，这使得该问题未解。好吧，这也是为什幺我们不做顺序TPG的原因。
+
+
+So, what we do instead?
+那我们怎幺办？
+
+
+Yeah, extension, which is So in a sequential circuit.
+是的，extension，在顺序电路中是So。
+
+
+This fault repeats.
+这种故障会反复出现。
+
+
+Circuit.
+电路（Circuit）。
+
+
+This fault repeats in all copies And in a combinational logic circuit this.
+这种故障在所有副本中都会重复出现，在组合逻辑电路中也是如此。
+
+

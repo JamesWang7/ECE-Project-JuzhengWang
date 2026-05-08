@@ -1,0 +1,84 @@
+Spot repeats in all copies And in a combinational logic circuit.
+所有副本和组合逻辑电路中的点重复。
+
+
+This fault is only in one place, So the combinational logic circuit.
+这个故障只有一个地方，所以是组合逻辑电路。
+
+
+If I prove that this fault has no test, I can remove that. Okay, in a sequential logic circuit, if I have proved that this fault could not be tested.
+如果我能证明这个故障没有测试，我就能去掉它。好，在顺序逻辑电路中，如果我证明了这个故障无法被测试。
+
+
+I could not remove that as a redundancy, And that's because maybe the fault could not be tested, because if I trigger the fault in the first cycle
+我无法去除这个冗余，因为可能无法测试故障，因为如果我在第一个周期触发故障
+
+
+The form got masked in the second cycle.
+表格在第二轮被屏蔽了。
+
+
+Okay, so that makes the fault untestable, but the fact that it got triggered in the first cycle and it got masked in the second cycle, which means that, uh, That logic is still doing something, so it's not redundant.
+好的，这就说明故障无法测试，但它在第一个周期被触发，第二个周期被掩盖了，这意味着，呃，这个逻辑还在做一些事情，所以它并不重复。
+
+
+So, that's when a sequential circuit In a combinational logic circuit.
+这就是组合逻辑电路中的顺序电路。
+
+
+An unjustable fault is a redundant fault in a sequential circuit
+不可合理故障是顺序电路中的冗余故障
+
+
+An untestable fault is not necessarily returnable. So, in a sequential circuit, I cannot do redundancy removal.
+无法测试的故障不一定能被回收。所以，在顺序电路中，我无法进行冗余消除。
+
+
+We discuss codem and at length, so I'm Not going to just go over that. But this is the Buddha is baked based on back Trace, and we make decisions of the primary inputs, and we put them in a stack and import them.
+我们会详细讨论codem，所以我不会简单地讲这个。但这是基于回溯追踪的“Buddha”烘焙的，我们对主要输入做出决策，然后将它们放进栈中并导入。
+
+
+We just Emphasize on, Um, Justification of the values first over propagation and D algorithm Focused on propagation first in whatever we do justification first, So we had gone through this example, and I'm not going to go through that.
+我们只是先强调，嗯，值的对齐而不是传播，而D算法则优先关注传播，所以我们已经讲过这个例子，我就不详细讲了。
+
+
+We found that the atpg complexity goes down.
+我们发现ATPG的复杂度会降低。
+
+
+We discuss codem and at length, so I'm Not going to just go over that, but this is the portable is baked based on back Trace, and we make decisions of the primary inputs, and we put them in a stack And important.
+我们会详细讨论代码，所以我不会简单讲述，但这是基于回溯追踪（back Trace）烘焙的便携版，我们会做出主要输入的决策，并将其放入一个重要的堆栈中。
+
+
+We just Emphasize on the Um Justification of the values first over propagation.
+我们只是先强调数值的“嗯”正当性，而不是传播。
+
+
+The algorithm Focused on propagation first, and whatever we do justification first
+算法首先关注传播，无论做什幺，都优先进行正当化
+
+
+So, we had gone to this example, and I'm not going to go through that.
+所以，我们讲过这个例子，我就不打算详细讲了。
+
+
+Certification first, so we had gone through this example, and I'm not going to go through that, And we found that the atpg complexity goes down.
+首先需要完成认证流程；因此我们已经通过这个例子进行了相关操作（具体步骤我就不再重复说明了）。通过分析我们发现：ATPG（一种算法）的复杂度确实有所降低。
+
+
+As you can find more and more implications, because if you have more implications, we are making fewer decisions And fewer decisions means that Fuel exploration, and that reduces the atpg complexity.
+随着你发现越来越多的影响，因为如果影响越多，我们做出的决策就越少。决策减少意味着燃料勘探，从而降低了ATPG的复杂性。
+
+
+So that's about the atpg, Uh. And then, when you go into the fan algorithm, we are making decisions on internal nodes unification.
+这就是关于 ATPG 的，呃。然后，当你进入风扇算法时，我们是在做内部节点统一的决策。
+
+
+Are you always working from the outputs backwards, Both for our duplication and backwards location?
+你是不是总是从输出反向工作，无论是为了复制还是反向定位？
+
+
+Okay, then we covered ldft
+好，那我们就讲了LDFT
+
+

@@ -1,0 +1,344 @@
+Means that Your exploration and that reduces the atpg complexity.
+这意味着你的探索会降低ATPG的复杂度。
+
+
+So that's about the atpg, Uh. And then, when you go into the fan algorithm, we are making decisions on internal nodes doing implication.
+这就是关于 ATPG 的，呃。然后，当你进入风扇算法时，我们是在内部节点做隐含决策。
+
+
+Or you're always working from the outputs backwards Book for education and backward developers.
+或者你总是从输出的倒向书中学习，教育和倒开发者。
+
+
+Then, we covered ldft. We talked about control media and observability insertion. Then, we covered mass scale. The Mark scan is the simplest form of scan.
+然后，我们讲了ldft。我们讨论了控制介质和可观测性插入。然后，我们讲了大规模。标记扫描是最简单的扫描形式。
+
+
+From there, we enter LSSD scan.
+接着进入LSSD扫描。
+
+
+What is the drawback of the mask scan Exactly the way because he's just putting it's forced through? We are forcing to the max. It added one stage of delay.
+这种口罩扫描方式的缺点是什幺呢？其实就是因为我们在强制将口罩通过扫描设备的过程中，对设备的压力被推到了极限；这种操作导致扫描过程增加了额外的延迟时间（即需要更多的时间来完成扫描）。
+
+
+And when you do lssd, you didn't At that delay because you transfer the delay to the clock path and in the cloth path.
+当你使用 LSSD（Low-Switching Delay）技术时，其实并不会产生延迟；这种延迟反而会被转移到时钟信号传输路径（clock path）中。
+
+
+The clock toggles every cycle, so the clock has a latency of distribution anyway.
+时钟每周期切换，所以时钟本身就有分布延迟。
+
+
+So, when you push it to the Thing, you just modified the latency of network you didn't modify the cycle time of the clock.
+因此，当你将数据发送到那个设备时，你只是改变了网络传输的延迟时间，并没有改变时钟的运行周期（即时钟的计时速度）。
+
+
+You only modified the latency of the clock.
+你只是调整了时钟的延迟。
+
+
+How long it takes to go from?
+从……到……需要多长时间？
+
+
+You change that, but you didn't change the cycle type.
+你改变了那个部分，但并没有改变“循环的类型”（即循环的具体形式或规则）。
+
+
+And Then we also talked about whole scan.
+然后我们还谈到了全扫描。
+
+
+Why do you do whole scan So you're not constantly talking the combinational logic? As we are shifting in the input, because that's when the test is not being performed, the test is performed after we have shifted in. And then we apply the system clock. That's when the test is performed.
+你为什幺要做全扫描？这样你就不会一直讲组合逻辑了吗？当我们在输入中移动时，因为那时测试还没进行，测试是在我们移动后才进行的。然后我们应用系统时钟。那时就开始了测试。
+
+
+So, during that shift operation, we want to hold that value so that we are not disappearing power Of the various issues.
+因此，在转移操作过程中，我们希望保持该值，以免各种问题的权力消失。
+
+
+Those cancellations need to be balanced Does all need to be the same length.
+这些抵消需要平衡，所有的长度都必须相同。
+
+
+No, they don't need to be the same length
+不，它们不需要长度相同
+
+
+Do you need to shift all scans at the same time?
+你需要同时转移所有扫描吗？
+
+
+No, we don't need to do that
+不，我们不需要那样做
+
+
+Can you create transition test using scan shape?
+你能用扫描形状来创建过渡测试吗？
+
+
+So, in a transition test, the tests are going to be slow to rise, slow to fall, etcetera, etc, so it involves two patterns pattern V1 and parent V2 In a normal scan test.
+在过渡测试中，测试会是上升缓慢、下降缓慢等，涉及两个模式V1和母V2。在正常扫描测试中。
+
+
+We, we only have pattern V1
+我们只有V1型
+
+
+So, basically, we have a logic circuit
+所以，基本上，我们有一个逻辑电路
+
+
+We shift in the pattern
+我们会在模式中发生变化
+
+
+No, we see Paul Vector, Uh, that we shift in the pattern V1, And then this is in place.
+不，我们看到保罗·维克多，呃，我们在V1模式中移动，然后这个就位了。
+
+
+The pattern V1 is in place
+V1模式已就位
+
+
+Then we Apply a capture clock And we capture the primary outputs and then you shift out the primary output.
+然后我们应用捕获时钟，捕获主输出，然后将主输出移出。
+
+
+So, if I say this is the input and this is the output, We shift in the pattern, Right?
+所以，如果我说这是输入，这是输出，我们就在模式中移动，对吧？
+
+
+We set up, And then we apply the system clock we capture, and we shift out Set Capture, shift up In transition test.
+我们设置，然后应用我们捕获的系统时钟，然后在转换测试中移出捕获，向上移动。
+
+
+We apply pattern V1 When you have to launch the transition from V1 to E2.
+当你需要启动从V1到E2的过渡时，我们会应用V1模式。
+
+
+There are two ways to launch the transition
+启动转型有两种方式
+
+
+One is The last shift could launch the transition
+其中之一是最后一班可以启动转型
+
+
+So, if I'm shifting the scan chain And the scantian values are 1, 0, 1, Okay, And then You know current values, then I just shifted that, so this one shifted here. This zero shifted here.
+所以，如果我在移动扫描链，而斯坎蒂安值是1、0、1，好，然后你知道当前的值，我就把它移位了，这个就在这里移动了。这个零点在这里移动了。
+
+
+This one fell off, and here I just put in a zero
+这个掉了，这里我直接填了零
+
+
+Okay, the last launch last shift Could create a transition.
+好吧，最后一次发射，最后一班可能会带来过渡。
+
+
+It's okay When I'm doing the shift operation.
+我做班次操作时没关系。
+
+
+The last shift would create a transition, And when I create a transition, then I apply V1 and then V2.
+最后一个位移会创建一个过渡，当我创建过渡时，我会应用V1，然后是V2。
+
+
+So, this is my V1, and this is my V2
+这是我的V1，这是我的V2
+
+
+So I did In the last shift.
+所以我上一班就这幺做了。
+
+
+I created a transition from V1 to V2 And That will be called a launch and shift, so I, so I launched a transition pattern on shift, and then I'll apply the capture clock.
+我创建了一个从 V1 到 V2 的过渡，这叫做启动和移位，所以我在换挡时启动了一个过渡模式，然后我会应用捕获时钟。
+
+
+I'll capture it, and I shift it out.
+我会捕捉它，然后把它移开。
+
+
+Yeah, That we have to see the last bit. The last bit that we are inserting The last pattern, so I have shifted in a pattern.
+是的，我们必须看到最后一部分。我们最后插入的部分是最后一个图案，所以我调整了一个图案。
+
+
+Yeah, That we have to see the last bit The last bit that we are inserting The last pattern, so I have shifted in a pattern this
+是的，我们必须看到最后一个部分，最后一个我们要插入的最后一个模式，所以我在一个模式中进行了移动
+
+
+As far as the initial pattern In this TV thing, Apply the clock. So, this one shifts here.
+至于这部电视的初始模式，应用时间。所以，这个在这里移动。
+
+
+The zero shifts here
+这里的零班移
+
+
+This one fell off, And then I get to insert something here
+这个掉了，然后我可以插点东西在这里
+
+
+So, what is the transition pattern here
+那幺，这里的过渡模式是什幺
+
+
+So, if iron Center is zero one to zero, What is the transition pattern here?
+那幺，如果铁中心是01到0，这里的转变模式是什幺？
+
+
+0 to the one.
+0比1。
+
+
+What is the transition pattern here 1 to a zero?
+这里的过渡模式是什幺，1到0？
+
+
+So, every input got a transition pattern.
+所以，每个输入都有一个过渡模式。
+
+
+How did it get the transition In the last shift
+上一班怎幺过渡的？
+
+
+And then I capture it. And what is the relationship between the scan clock and the capture clock?
+然后我捕捉它。扫描时钟和捕获时钟之间的关系是什幺？
+
+
+Then, once I have shifted the last pattern, If this circuit is supposed to have a 500 per second delay, When you apply the capture clock to capture that value 500 picoseconds after the launch, And if if you did that, then we have performed a speed test.
+然后，一旦我调整了最后的模式，如果这个电路的延迟是每秒500，那幺在发射后500皮秒应用捕获时钟，如果是这样，我们就做了速度测试。
+
+
+Is that there, assuming your like output is correct, assuming your output is correct? Uh, you are verified that it performs at 500 microseconds incorrect, and you fail yours if it's incorated failure speed test.
+假设你的类推输出正确，假设输出正确，那个问题存在吗？呃，你被验证了它在500微秒时的表现错误，如果是涂层故障速度测试，你就会不及格。
+
+
+So, it may be that whenever, after the last shift, if I apply the clock at 800 because I can sit passes At 500 per second, it doesn't pass.
+所以，可能在最后一班之后，如果我把计时器按800秒，因为我能以每秒500通过，它就不会通过。
+
+
+What does that mean?
+那是什幺意思？
+
+
+Means the circuit is slow
+说明电路很慢
+
+
+Means the circuit is slow. Transition fault exists. It's not meeting the performance specification. I designed it for 500 micro seconds.
+说明电路很慢。存在过渡断层。它不符合性能规格。我设计的是500微秒。
+
+
+I, it didn't make the 500 sorry specification
+我，它没达到500的规格，抱歉
+
+
+Is that fair Is one way to launch transition?
+这公平吗？是启动转变的一种方式吗？
+
+
+Another way to launch transition, Uh. So, this is called long-term shift long term shift.
+另一种启动转变的方式，呃。这就是所谓的长期转移。
+
+
+Another way to launch a transition will be
+另一种启动过渡的方式是
+
+
+I have the circuit.
+我有电路。
+
+
+I apply pattern V1.
+我应用了V1型。
+
+
+This is the setup pattern, And then I captured on This flip flops.
+这是布置模式，然后我用这双人字拖捕捉了。
+
+
+This is my V2, So apply Z1.
+这是我的V2，所以应用Z1。
+
+
+And this because These values become V2, then apply the capture clock again
+因为这些值变为V2，然后再次应用捕获时钟
+
+
+So, here I go.
+所以，我开始说了。
+
+
+From V1 To V2 is the launch, And then I capture it again, and this is The final output
+从V1到V2是发射，然后我再捕捉一次，这就是最终输出
+
+
+So here, the pattern V2 is being generated not by a shift, But by setting up the input capturing them in the output and assuming The inputs and the outputs are the same.
+这里，模式 V2 不是通过移位生成的，而是通过设置输入捕获它们，假设输入和输出相同。
+
+
+In a circuit combinational In a Milli machine, so this would be what is called launch on capture.
+在电路组合中，在毫比机中，这就是所谓的捕获发射。
+
+
+So, there are two ways to do that. This is just a diversion.
+所以，有两种方式可以做到这一点。这只是个转移注意力的手段。
+
+
+So, yeah, Why you need to change all of this?
+那幺，是的，为什幺你需要改变这一切？
+
+
+Can't?
+不行吗？
+
+
+Can't I just change one bit and see how long it takes the properties about, but how much can you one picture
+我不能只改一点，看看属性大概需要多长时间吗？但一张图片能改多久？
+
+
+All your inputs are connected to the scan chair.
+你所有的输入都连接到扫描椅上。
+
+
+So, Other thing is, there is a partial shift method.
+还有一点是，存在一种部分移位方法。
+
+
+So, if I have a very long scan chain, and if I'm only interested in one portion of the circuit, not the entire circuit, I don't have to shift that there's cancer.
+所以，如果我有很长的扫描链，而且我只关注电路的一部分，而不是整个电路，我就不需要去判断它有癌症。
+
+
+So I have.
+所以我做到了。
+
+
+This is my combinational logic circuit, But I'm only interested in testing out this portion of the combinational logic circuit
+这是我的组合逻辑电路，但我只想测试这部分组合逻辑电路
+
+
+So this, this logic circuit as a whole has many, many primary inputs and outputs.
+所以这个逻辑电路整体上有许多非常多的主输入和输出。
+
+
+But since I'm focusing on this, This only connects to few inputs and outputs, And so I don't have to shift, then task engine. I can set up the inputs for this guy by shifting only a few bits only up to here.
+但既然我专注于这个，它只连接少数输入和输出，所以我不用先切换，然后再启动任务引擎。我只需移动几位位，就能为这个人设置输入到这里。
+
+
+That
+那个
+
+
+Is Built-In self test?
+内置自测是吗？
+
+
+Why do you do built-in self test
+你为什幺要做内置自测
+
+
