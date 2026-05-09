@@ -1,0 +1,6 @@
+Circuit: c432
+Good ORA Signature: 0xBDF7
+Total Faults: 524
+Detected Faults: 404
+Fault Coverage: 77.10%
+Observed Aliasing Count: 0

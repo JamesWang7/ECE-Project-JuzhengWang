@@ -1,0 +1,6 @@
+Circuit: c1355
+Good ORA Signature: 0xFEC0
+Total Faults: 1574
+Detected Faults: 1319
+Fault Coverage: 83.80%
+Observed Aliasing Count: 0

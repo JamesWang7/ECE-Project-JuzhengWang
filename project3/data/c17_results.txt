@@ -1,0 +1,6 @@
+Circuit: c17
+Good ORA Signature: 0x405D
+Total Faults: 22
+Detected Faults: 16
+Fault Coverage: 72.73%
+Observed Aliasing Count: 0

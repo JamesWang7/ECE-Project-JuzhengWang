@@ -1,0 +1,6 @@
+Circuit: c880
+Good ORA Signature: 0x73C3
+Total Faults: 942
+Detected Faults: 739
+Fault Coverage: 78.45%
+Observed Aliasing Count: 0

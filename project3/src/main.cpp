@@ -233,10 +233,10 @@ void process_circuit(string circuit_name) {
     TPG tpg;
     ORA ora_good;
 
-    // 2. Simulate 100 patterns on good circuit [cite: 15, 20]
+    // 2. Simulate 100 patterns on good circuit 
     for (int p = 1; p <= 100; ++p) { 
         
-        // Scan-in: Shift bits from TPG into inputs [cite: 26, 67, 134]
+        // Scan-in: Shift bits from TPG into inputs 
         for (int pi_id : pi_ids) {
             all_gates[pi_id].good_value = tpg.next_bit(); 
         }
@@ -252,7 +252,7 @@ void process_circuit(string circuit_name) {
             }
         }
 
-        // Scan-out: Shift outputs into ORA to update signature [cite: 28, 69, 135]
+        // Scan-out: Shift outputs into ORA to update signature 
         for (int po_id : po_ids) {
             uint8_t out_bit = all_gates[po_id].good_value & 1; 
             ora_good.update(out_bit); 
@@ -272,91 +272,112 @@ void process_circuit(string circuit_name) {
         return;
     }
 
-    // 7. PPSFP Main Simulation Loop (10 patterns, 64 bits each)
-    random_device rd; mt19937_64 gen(rd()); uniform_int_distribution<uint64_t> dis;
+    // ---------------------------------------------------------
+    // Phase 2: Parallel Pattern Fault Simulation (Word-Level Packing)
+    // ---------------------------------------------------------
     int detected_count = 0;
+    int alias_count = 0; // Track how many times Aliasing occurs
 
-    // for (int p = 1; p <= 10; ++p) { 
-    //     // Good Machine Simulation
-    //     for (Gate* g : eval_queue) {
-    //         if (g->type == "PI") g->good_value = dis(gen);
-    //         else {
-    //             vector<uint64_t> iv;
-    //             for (int fin : g->fanins) iv.push_back(all_gates[fin].good_value);
-    //             g->good_value = calculate_bitwise(g->type, iv);
-    //         }
-    //     }
-
-    //     // Format: Pattern X: <input vector>
-    //     res_file << "Pattern " << p << ": ";
-    //     for (int pi_id : pi_ids) {
-    //         res_file << hex << uppercase << all_gates[pi_id].good_value << " ";
-    //     }
-    //     res_file << dec << "\n";
-
-    //     // Map to track which faults are detected at which PO
-    //     map<int, vector<string>> po_faults_detected;
-
-    //     // Faulty Machine Simulation + Fault Dropping
-    //     for (auto& f : fault_list) {
-    //         if (f.detected) continue; // Drop already detected faults
-
-    //         for (Gate* g : eval_queue) {
-    //             // Optimization: No need to recalculate gates before the fault location
-    //             if (g->level < all_gates[f.gate_id].level) { g->faulty_value = g->good_value; continue; }
-
-    //             vector<uint64_t> iv;
-    //             for (int fin : g->fanins) {
-    //                 uint64_t v = all_gates[fin].faulty_value;
-    //                 // Input branch fault injection
-    //                 if (g->id == f.gate_id && fin == f.branch_id) v = f.stuck_at ? ~0ULL : 0ULL;
-    //                 iv.push_back(v);
-    //             }
-    //             uint64_t gv = calculate_bitwise(g->type, iv);
-    //             // Gate output fault injection
-    //             if (g->id == f.gate_id && f.branch_id == 0) gv = f.stuck_at ? ~0ULL : 0ULL;
-    //             g->faulty_value = gv;
-    //         }
-
-    //         // Detection Check: Compare all PO nodes
-    //         bool newly_detected = false;
-    //         for (int id : po_ids) {
-    //             uint64_t mask = (all_gates[id].good_value ^ all_gates[id].faulty_value);
-    //             if (mask != 0) {
-    //                 po_faults_detected[id].push_back(format_fault(f));
-    //                 newly_detected = true;
-    //             }
-    //         }
-    //         if (newly_detected) {
-    //             f.detected = true;
-    //             detected_count++;
-    //         }
-    //     }
-
-    //     // Format: Output <out_name>: Faults detected: <fault_list>
-    //     for (int po_id : po_ids) {
-    //         res_file << "Output " << po_id << ": Faults detected: ";
-    //         if (po_faults_detected[po_id].empty()) {
-    //             res_file << "None";
-    //         } else {
-    //             for (size_t i = 0; i < po_faults_detected[po_id].size(); ++i) {
-    //                 res_file << po_faults_detected[po_id][i];
-    //                 if (i < po_faults_detected[po_id].size() - 1) res_file << ", ";
-    //             }
-    //         }
-    //         res_file << "\n";
-    //     }
+    // Process faults in chunks of 64
+    for (size_t f_base = 0; f_base < fault_list.size(); f_base += 64) {
+        int chunk_size = min((size_t)64, fault_list.size() - f_base);
         
-    //     // Record Cumulative Fault Coverage
-    //     res_file << "Cumulative Fault Coverage: " << detected_count << " / " << fault_list.size() 
-    //              << " (" << fixed << setprecision(2) << ((double)detected_count / fault_list.size()) * 100 << "%)\n\n";
-    // }
+        TPG tpg_faulty;            // Automatically resets to 0xAAAAAAAA for each chunk
+        ORA faulty_oras[64];       // Array of 64 independent ORAs initialized to 0
+        bool propagated[64] = {false}; // Tracks if a fault ever changed a PO bit
 
+        // Run 100 sequential patterns for this chunk of 64 faults
+        for (int p = 1; p <= 100; ++p) {
+            
+            // Scan-in: Get 1 bit from TPG, expand to 64 bits for parallel logic
+            for (int pi_id : pi_ids) {
+                uint64_t bit = tpg_faulty.next_bit();
+                all_gates[pi_id].good_value = bit;
+                all_gates[pi_id].faulty_value = bit ? ~0ULL : 0ULL; 
+            }
+
+            // Capture: Evaluate logic & Inject faults
+            for (Gate* g : eval_queue) {
+                if (g->type != "PI") {
+                    // Good value eval (needed to compare against for Aliasing check)
+                    vector<uint64_t> iv_good;
+                    for (int fin : g->fanins) iv_good.push_back(all_gates[fin].good_value);
+                    g->good_value = calculate_bitwise(g->type, iv_good) & 1;
+
+                    // Faulty value eval with 64-bit packing
+                    vector<uint64_t> iv_faulty;
+                    for (int fin : g->fanins) {
+                        uint64_t v = all_gates[fin].faulty_value;
+                        // Inject branch faults
+                        for (int i = 0; i < chunk_size; ++i) {
+                            Fault& f = fault_list[f_base + i];
+                            if (g->id == f.gate_id && fin == f.branch_id) {
+                                if (f.stuck_at == 1) v |= (1ULL << i);
+                                else v &= ~(1ULL << i);
+                            }
+                        }
+                        iv_faulty.push_back(v);
+                    }
+                    
+                    uint64_t gv = calculate_bitwise(g->type, iv_faulty);
+                    
+                    // Inject gate output faults
+                    for (int i = 0; i < chunk_size; ++i) {
+                        Fault& f = fault_list[f_base + i];
+                        if (g->id == f.gate_id && f.branch_id == 0) {
+                            if (f.stuck_at == 1) gv |= (1ULL << i);
+                            else gv &= ~(1ULL << i);
+                        }
+                    }
+                    g->faulty_value = gv;
+                }
+            }
+
+            // Scan-out: Update 64 ORAs and check for propagation
+            for (int po_id : po_ids) {
+                uint8_t good_out_bit = all_gates[po_id].good_value & 1;
+                uint64_t faulty_out_word = all_gates[po_id].faulty_value;
+                
+                for (int i = 0; i < chunk_size; ++i) {
+                    uint8_t faulty_bit = (faulty_out_word >> i) & 1;
+                    faulty_oras[i].update(faulty_bit); // Serially update specific fault's ORA
+                    
+                    if (faulty_bit != good_out_bit) {
+                        propagated[i] = true; // Fault successfully altered a PO bit!
+                    }
+                }
+            }
+        } // End of 100 patterns for current chunk
+
+        // Finalize chunk: Check detection and aliasing
+        for (int i = 0; i < chunk_size; ++i) {
+            if (faulty_oras[i].get_signature() != good_signature) {
+                // Signature changed -> Fault Detected!
+                fault_list[f_base + i].detected = true;
+                detected_count++;
+            } else if (propagated[i] == true) {
+                // Fault changed POs, but signature is same -> ALIASING!
+                alias_count++;
+            }
+        }
+    }
+
+    // ---------------------------------------------------------
+    // Phase 3: Write Results to File and Console
+    // ---------------------------------------------------------
+    res_file << "Circuit: " << circuit_name << "\n";
+    res_file << "Good ORA Signature: 0x" << hex << uppercase << setfill('0') << setw(4) << good_signature << dec << "\n";
+    res_file << "Total Faults: " << fault_list.size() << "\n";
+    res_file << "Detected Faults: " << detected_count << "\n";
+    res_file << "Fault Coverage: " << fixed << setprecision(2) << ((double)detected_count / fault_list.size()) * 100 << "%\n";
+    res_file << "Observed Aliasing Count: " << alias_count << "\n";
     res_file.close();
 
-    // Print final coverage of the circuit to the console
+    // Print final console output
     cout << "  -> Total Faults: " << fault_list.size() << " | Detected: " << detected_count 
-         << " (" << fixed << setprecision(2) << (double)detected_count/fault_list.size()*100 << "%)" << endl;
+         << " (" << fixed << setprecision(2) << ((double)detected_count/fault_list.size())*100 << "%)";
+    if (alias_count > 0) cout << " [Aliasing Occurred: " << alias_count << " times]";
+    cout << endl;
 }
 
 int main() {

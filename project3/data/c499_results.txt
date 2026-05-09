@@ -1,0 +1,6 @@
+Circuit: c499
+Good ORA Signature: 0x507F
+Total Faults: 718
+Detected Faults: 670
+Fault Coverage: 93.31%
+Observed Aliasing Count: 48
